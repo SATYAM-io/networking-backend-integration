@@ -24,7 +24,7 @@ export async function POST(request:Request) {
             args: [name, email]
         })
         return Response.json(
-            {id:result.lastInsertRowid, name, email },
+            {id: Number(result.lastInsertRowid), name, email },
             {status: 201}
         )
     } catch (error) {
